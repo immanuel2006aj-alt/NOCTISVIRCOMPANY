@@ -1,0 +1,121 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: "#080B12",
+        surface: "#0E1420",
+        surfaceElevated: "#121B2A",
+        surfaceHover: "#182437",
+        textPrimary: "#F4F7FB",
+        textSecondary: "#A8B4C7",
+        textMuted: "#7D8AA0",
+        border: "#253247",
+        borderStrong: "#3A4B63",
+        accent: "#39D5FF",
+        accentHover: "#75E4FF",
+        accentSoft: "#103140",
+        secondaryAccent: "#7C8CFF",
+        success: "#4ADE80",
+        warning: "#FBBF24",
+        error: "#FB7185",
+        info: "#60A5FA",
+        focus: "#75E4FF",
+      },
+      fontFamily: {
+        display: ["var(--font-space-grotesk)", "ui-sans-serif", "system-ui", "sans-serif"],
+        body: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+      },
+      fontSize: {
+        xs: ["0.75rem", { lineHeight: "1rem" }],
+        sm: ["0.875rem", { lineHeight: "1.25rem" }],
+        base: ["1rem", { lineHeight: "1.625rem" }],
+        lg: ["1.125rem", { lineHeight: "1.75rem" }],
+        xl: ["1.25rem", { lineHeight: "1.75rem" }],
+        "2xl": ["1.5rem", { lineHeight: "2rem" }],
+        "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+        "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
+        "5xl": ["3rem", { lineHeight: "1.1" }],
+        "6xl": ["3.75rem", { lineHeight: "1.05" }],
+        "7xl": ["4.5rem", { lineHeight: "1.02" }],
+      },
+      spacing: {
+        "1": "0.25rem",
+        "2": "0.5rem",
+        "3": "0.75rem",
+        "4": "1rem",
+        "5": "1.25rem",
+        "6": "1.5rem",
+        "8": "2rem",
+        "10": "2.5rem",
+        "12": "3rem",
+        "16": "4rem",
+        "20": "5rem",
+        "24": "6rem",
+        "28": "7rem",
+      },
+      borderRadius: {
+        sm: "0.375rem",
+        md: "0.625rem",
+        lg: "0.75rem",
+        xl: "1rem",
+        "2xl": "1.125rem",
+        "3xl": "1.5rem",
+        pill: "9999px",
+      },
+      boxShadow: {
+        subtle: "0 1px 2px rgba(0,0,0,0.22)",
+        card: "0 8px 24px rgba(0,0,0,0.22)",
+        elevated: "0 20px 60px rgba(0,0,0,0.35)",
+        focus: "0 0 0 3px rgba(57,213,255,0.28)",
+      },
+      screens: {
+        xs: "320px",
+        sm: "480px",
+        md: "640px",
+        tablet: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1440px",
+        wide: "1920px",
+      },
+      maxWidth: {
+        content: "1280px",
+        wide: "1600px",
+      },
+      transitionDuration: {
+        fast: "120ms",
+        normal: "180ms",
+        slow: "280ms",
+      },
+      transitionTimingFunction: {
+        "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "in-out-smooth": "cubic-bezier(0.65, 0, 0.35, 1)",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(8px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-in": "fadeIn 280ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-up": "slideUp 280ms cubic-bezier(0.16, 1, 0.3, 1)",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
